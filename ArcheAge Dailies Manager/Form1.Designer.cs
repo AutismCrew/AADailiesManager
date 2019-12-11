@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.questDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.questListBox = new System.Windows.Forms.ListBox();
             this.findAAButton = new System.Windows.Forms.Button();
@@ -261,7 +262,9 @@
             this.Controls.Add(this.findAAButton);
             this.Controls.Add(this.questListBox);
             this.Controls.Add(this.questDescriptionTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "mainForm";
             this.Text = "ArcheAge Dailies Manager";
             this.Load += new System.EventHandler(this.mainForm_Load);
