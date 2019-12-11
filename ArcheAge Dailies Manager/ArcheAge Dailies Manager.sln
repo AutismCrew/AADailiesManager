@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcheAge Dailies Manager", "ArcheAge Dailies Manager.csproj", "{B00A31C0-4588-4C1A-B70A-90563DF83A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B00A31C0-4588-4C1A-B70A-90563DF83A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00A31C0-4588-4C1A-B70A-90563DF83A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00A31C0-4588-4C1A-B70A-90563DF83A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00A31C0-4588-4C1A-B70A-90563DF83A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DD6F56B-BFFA-4FB2-B63C-8BD6E909FE97}
+	EndGlobalSection
+EndGlobal
