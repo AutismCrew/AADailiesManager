@@ -308,6 +308,7 @@ namespace ArcheAge_Dailies_Manager
                 b = AdjustContrast(b, 40);
 
                 string obtainedText = GetText(b);
+                string ogText = "" + obtainedText;
                 //Debug.WriteLine(obtainedText);
                 b.Dispose();
                 //Debug.WriteLine("UWUWUWUWUWUW " + i++);
@@ -319,7 +320,7 @@ namespace ArcheAge_Dailies_Manager
 
                     List<string> completedQuests = new List<string>();
 
-                    while (obtainedText.Contains("Completed Quest: ["))
+                    while (obtainedText.Contains(toBeSearched))
                     {
                         // Remove everything up to the [
                         obtainedText = obtainedText.Substring(obtainedText.IndexOf(toBeSearched) + toBeSearched.Length);
@@ -345,6 +346,7 @@ namespace ArcheAge_Dailies_Manager
                         }
                     }
                 }
+                obtainedText = ogText;
                 if (obtainedText.Contains("Quest accepted: ["))
                 {
                     // Try to read the quest name
@@ -367,10 +369,10 @@ namespace ArcheAge_Dailies_Manager
                         {
                             if (((Quest)questObj).name.Equals(questName))
                             {
-                                if (((Quest)questObj).questStatus != QUEST_STATUS.Completed)
+                                if (((Quest)questObj).questStatus == QUEST_STATUS.NotReceived)
                                 {
-                                    ((Quest)questObj).completeQuest();
-                                    Debug.WriteLine("Completed quest found!");
+                                    ((Quest)questObj).questStatus = QUEST_STATUS.InProgress;
+                                    Debug.WriteLine("Accepted quest found!");
                                     RefreshButtonsText();
                                 }
 
@@ -439,6 +441,14 @@ namespace ArcheAge_Dailies_Manager
         private void captureStartButton_Click(object sender, EventArgs e)
         {
             screenCaptureTimer.Enabled = true;
+            stopButton.Enabled = true;
+            captureStartButton.Enabled = false;
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            screenCaptureTimer.Enabled = false;
+            stopButton.Enabled = false;
         }
     }
 }

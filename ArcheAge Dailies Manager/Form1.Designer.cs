@@ -49,6 +49,7 @@
             this.resetTimer = new System.Windows.Forms.Timer(this.components);
             this.screenCaptureTimer = new System.Windows.Forms.Timer(this.components);
             this.captureStartButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.questLocationPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,11 +226,23 @@
             this.captureStartButton.UseVisualStyleBackColor = true;
             this.captureStartButton.Click += new System.EventHandler(this.captureStartButton_Click);
             // 
+            // stopButton
+            // 
+            this.stopButton.Enabled = false;
+            this.stopButton.Location = new System.Drawing.Point(679, 487);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(75, 23);
+            this.stopButton.TabIndex = 18;
+            this.stopButton.Text = "STOP";
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 552);
+            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.captureStartButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.y2TextBox);
@@ -280,6 +293,7 @@
         private System.Windows.Forms.Timer resetTimer;
         private System.Windows.Forms.Timer screenCaptureTimer;
         private System.Windows.Forms.Button captureStartButton;
+        private System.Windows.Forms.Button stopButton;
     }
 }
 
