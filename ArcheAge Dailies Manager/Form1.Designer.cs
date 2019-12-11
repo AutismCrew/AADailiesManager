@@ -207,7 +207,7 @@
             // resetTimer
             // 
             this.resetTimer.Enabled = true;
-            this.resetTimer.Interval = 500;
+            this.resetTimer.Interval = 5000;
             this.resetTimer.Tick += new System.EventHandler(this.resetTimer_Tick);
             // 
             // screenCaptureTimer

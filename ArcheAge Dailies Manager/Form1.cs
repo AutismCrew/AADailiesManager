@@ -435,7 +435,22 @@ namespace ArcheAge_Dailies_Manager
 
         private void resetTimer_Tick(object sender, EventArgs e)
         {
-            //RefreshButtonsText();
+            lock (_lockObj2)
+            {
+                foreach (Object questObj in questListBox.Items)
+                {
+                    DateTime now = DateTime.UtcNow.Date;
+                    DateTime handInDate = new DateTime(((Quest)questObj).handInTime);
+                    Debug.WriteLine(handInDate);
+                    if (now != handInDate.Date && handInDate.Date != new DateTime(0L).Date && ((Quest)questObj).questStatus == QUEST_STATUS.Completed)
+                    {
+                        Debug.WriteLine("Reset time!");
+                        ((Quest)questObj).questStatus = QUEST_STATUS.NotReceived;
+                        ((Quest)questObj).handInTime = 0L;
+                    }
+                }
+            }
+            
         }
 
         private void captureStartButton_Click(object sender, EventArgs e)
@@ -449,6 +464,7 @@ namespace ArcheAge_Dailies_Manager
         {
             screenCaptureTimer.Enabled = false;
             stopButton.Enabled = false;
+            captureStartButton.Enabled = true;
         }
     }
 }
