@@ -1,0 +1,6 @@
+Diamond Shores Guard
+XP:     4711
+Coins:  31S 97C
+Reward: Mysterious Hiram Infusion x3
+Location: Diamond Shores
+Description: Kill enemies in Diamond Shores (50)

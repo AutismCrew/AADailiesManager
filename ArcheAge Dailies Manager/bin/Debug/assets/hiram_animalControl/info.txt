@@ -1,0 +1,6 @@
+Animal Control
+XP:     27512
+Coins:  37S 28C
+Reward: Radiant Hiram Awakening Scroll x7 OR Radiant Hiram Infusion x3
+Location: Western Hiram Mountains | Hiram Cave
+Description: Kill animals to gain control over their numbers (50)

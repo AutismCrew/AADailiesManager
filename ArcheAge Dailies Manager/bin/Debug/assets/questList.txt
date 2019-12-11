@@ -1,0 +1,12 @@
+hiram_animalControl
+hiram_mutatedAnimals
+hiram_stopAbyssalLegion
+hiram_theAbyssalLegion
+hiram_millenniumMammoths
+hiram_haradiumAbominations
+hiram_sungoldFields
+hiram_blackForestTreants
+hiram_fallOfHiramCity
+hiram_guardianOfExeloch
+hiram_guardianOfReedwind
+hiram_diamondShoresGuard
