@@ -266,7 +266,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "mainForm";
-            this.Text = "ArcheAge Dailies Manager";
+            this.Text = "ArcheAge Dailies Manager - https://github.com/AutismCrew/AADailiesManager";
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.questLocationPictureBox)).EndInit();
             this.ResumeLayout(false);
