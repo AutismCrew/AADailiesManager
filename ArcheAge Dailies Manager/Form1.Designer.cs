@@ -51,7 +51,10 @@
             this.screenCaptureTimer = new System.Windows.Forms.Timer(this.components);
             this.captureStartButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.questStatusPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.questLocationPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.questStatusPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // questDescriptionTextBox
@@ -238,11 +241,30 @@
             this.stopButton.UseVisualStyleBackColor = true;
             this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(457, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Quest Status:";
+            // 
+            // questStatusPictureBox
+            // 
+            this.questStatusPictureBox.Location = new System.Drawing.Point(534, 351);
+            this.questStatusPictureBox.Name = "questStatusPictureBox";
+            this.questStatusPictureBox.Size = new System.Drawing.Size(102, 21);
+            this.questStatusPictureBox.TabIndex = 20;
+            this.questStatusPictureBox.TabStop = false;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 552);
+            this.Controls.Add(this.questStatusPictureBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.captureStartButton);
             this.Controls.Add(this.label3);
@@ -269,6 +291,7 @@
             this.Text = "ArcheAge Dailies Manager - https://github.com/AutismCrew/AADailiesManager";
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.questLocationPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.questStatusPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +320,8 @@
         private System.Windows.Forms.Timer screenCaptureTimer;
         private System.Windows.Forms.Button captureStartButton;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox questStatusPictureBox;
     }
 }
 

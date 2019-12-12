@@ -67,7 +67,8 @@ namespace ArcheAge_Dailies_Manager
 
             //
             questListBox.SelectedIndex = 0;
-            
+
+            questStatusPictureBox.BackColor = Color.Gray;
 
         }
 
@@ -126,9 +127,12 @@ namespace ArcheAge_Dailies_Manager
         private void RefreshButtonsText()
         {
             if (((Quest)questListBox.SelectedItem).questStatus != QUEST_STATUS.Completed)
+            {
                 manualReceiveHandInButton.Enabled = true;
+            }      
             else
                 manualReceiveHandInButton.Enabled = false;
+
             if (((Quest)questListBox.SelectedItem).questStatus != QUEST_STATUS.NotReceived)
                 resetSelectedButton.Enabled = true;
             else
@@ -138,12 +142,15 @@ namespace ArcheAge_Dailies_Manager
             {
                 case QUEST_STATUS.NotReceived:
                     manualReceiveHandInButton.Text = "Receive";
+                    questStatusPictureBox.BackColor = Color.Red;
                     break;
                 case QUEST_STATUS.InProgress:
                     manualReceiveHandInButton.Text = "Hand In";
+                    questStatusPictureBox.BackColor = Color.Yellow;
                     break;
                 case QUEST_STATUS.Completed:
                     manualReceiveHandInButton.Text = "-";
+                    questStatusPictureBox.BackColor = Color.Green;
                     break;
             }
         }
